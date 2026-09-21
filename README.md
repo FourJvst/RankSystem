@@ -36,3 +36,29 @@ Die fertige Plugin-Datei wird als `target/Ranks.jar` erzeugt. Kopiere sie in den
 - Moderator- und Helfer-Rechte sind nur im aktiven Rangmodus verfuegbar.
 - Teammitglieder sind im aktiven Rangmodus unverwundbar.
 - Beim Aktivieren von `/aduty` wird eine Servermeldung ausgegeben.
+
+- ## Ranks Paper Plugin
+
+Das Plugin wird mit Java 21 und Maven gebaut:
+
+mvn package
+
+Commands:
+
+- /rank <Spieler> spieler|admin|moderator|helfer|builder|none
+- /aduty
+- /teaminvite <Spieler> <Rang>
+- /teamaccept
+- /buildmode
+- /bc <Nachricht>
+- /teammitglieder
+- /fly
+- /gmc, /gms und /gmsp
+- /serverip
+- /tc <Nachricht>
+
+### Builder-Rang
+
+Builder sind ein eigener Rang und keine Untergruppe der Helfer. Sie werden über `/teaminvite <Spieler> builder` eingeladen und treten mit `/teamaccept` bei.
+
+Mit `/buildmode` wechseln sie in Creative. `[B]` wird orange vor dem weißen Namen angezeigt. Beim erneuten Ausführen wechseln sie zurück in Survival. Außerhalb des Baumodus können Builder keine Blöcke abbauen und `/aduty` nicht verwenden.
