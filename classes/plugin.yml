@@ -1,0 +1,45 @@
+name: Ranks
+version: 1.0.0
+main: plugin.roleplay.guns.drugs.ranks.RanksPlugin
+api-version: '1.21'
+author: Serverteam
+description: Rangsystem mit Tab-Praefixen, Rangmodus und Teamchat
+
+commands:
+  rank:
+    description: Setzt den Rang eines Spielers.
+    usage: /rank <Spieler> <admin|moderator|helfer|none>
+    permission: ranks.manage
+  fly:
+    description: Schaltet Fliegen fuer dich oder einen Spieler um.
+    usage: /fly [Spieler]
+  aduty:
+    description: Schaltet den Rangmodus an oder aus.
+    usage: /aduty
+  teamchat:
+    aliases: [tc]
+    description: Schreibt in den Teamchat oder schaltet ihn um.
+    usage: /teamchat [Nachricht]
+  gmc:
+    description: Wechselt in den Kreativmodus.
+    usage: /gmc [Spieler]
+    permission: ranks.gmc
+  gms:
+    description: Wechselt in den Ueberlebensmodus.
+    usage: /gms [Spieler]
+    permission: ranks.gms
+  gmsp:
+    description: Wechselt in den Zuschauermodus.
+    usage: /gmsp [Spieler]
+    permission: ranks.gmsp
+
+permissions:
+  ranks.manage:
+    description: Darf Spielerraenge verwalten.
+    default: op
+  ranks.fly:
+    description: Darf /fly verwenden.
+    default: false
+  ranks.teamchat:
+    description: Darf den Teamchat verwenden.
+    default: false
